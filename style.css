@@ -1,0 +1,149 @@
+:root {
+  --color-primary: #f46036;
+  --color-secondary: #6c9a8b;
+  --color-shadow: #00000020;
+
+  --color-offwhite: #fafafa;
+  --color-offblack: #222;
+  --color-darkgrey: #555;
+  --color-lightgrey: #aaa;
+}
+
+body {
+  background-color: var(--color-offwhite);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+body,
+p {
+  font-family: "Lora", serif;
+}
+
+/* Name Trace */
+
+.nameTrace {
+  width: 500px;
+  margin: 40vh 0 200px 20vw;
+}
+
+.nameTrace > path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.nameTrace > .layer1 {
+  stroke: var(--color-lightgrey);
+}
+
+.nameTrace > .layer2 {
+  stroke: var(--color-darkgrey);
+}
+
+.nameTrace > .reverse {
+  stroke-dashoffset: -1;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* About Me */
+h2 {
+  color: var(--color-darkgrey);
+  font-size: 5rem;
+  margin: 0px;
+}
+.aboutMe {
+  text-align: right;
+  margin-right: 20vw;
+  margin-bottom: 200px;
+}
+
+.portfolio {
+  margin-left: 20vw;
+  padding-left: 10px;
+}
+
+/* Cards */
+
+.cards {
+  padding: 0px 20px 0 20vw;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  width: 400px;
+  height: 600px;
+  margin: 30px 10px;
+  box-shadow: 0 0 10px 1px var(--color-shadow);
+  border-radius: 10px;
+  display: inline-block;
+  background-color: white;
+  text-decoration: none;
+  transition: 300ms;
+}
+
+.card:hover {
+  transform: scale(1.0125);
+  box-shadow: 0 0 20px 2px var(--color-shadow);
+}
+
+.card p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 30px 0 0 30px;
+  color: var(--color-offblack);
+}
+
+.card h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem + 10px;
+  margin: 30px 30px 50px 30px;
+  color: var(--color-offblack);
+}
+
+.card img {
+  border-radius: 0 0 10px 10px;
+}
+
+/* Footer */
+
+footer {
+  background-color: white;
+  height: 50px;
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer a {
+  text-decoration: none;
+}
+footer p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: var(--color-darkgrey);
+  display: inline;
+}
+
+footer svg {
+  display: inline;
+}
