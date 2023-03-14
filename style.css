@@ -1,8 +1,4 @@
 :root {
-  --color-primary: #f46036;
-  --color-secondary: #6c9a8b;
-  --color-shadow: #00000020;
-
   --color-offwhite: #fafafa;
   --color-offblack: #222;
   --color-darkgrey: #555;
@@ -30,7 +26,7 @@ p {
 
 .nameTrace {
   width: 500px;
-  margin: 40vh 0 200px 20vw;
+  margin: 45vh 0 45vh 20vw;
 }
 
 .nameTrace > path {
@@ -56,7 +52,14 @@ p {
   }
 }
 
+@keyframes undraw {
+  to {
+    stroke-dashoffset: 1;
+  }
+}
+
 /* About Me */
+
 h2 {
   color: var(--color-darkgrey);
   font-size: 5rem;
@@ -65,15 +68,15 @@ h2 {
 .aboutMe {
   text-align: right;
   margin-right: 20vw;
-  margin-bottom: 200px;
+  margin-bottom: 45vh;
 }
+
+/* Portfolio */
 
 .portfolio {
   margin-left: 20vw;
   padding-left: 10px;
 }
-
-/* Cards */
 
 .cards {
   padding: 0px 20px 0 20vw;
@@ -134,16 +137,56 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-footer a {
-  text-decoration: none;
-}
+footer a,
 footer p {
+  text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   color: var(--color-darkgrey);
   display: inline;
 }
 
+footer a:hover {
+  text-decoration: underline;
+}
+
 footer svg {
   display: inline;
+  fill: var(--color-darkgrey);
+}
+
+/* Animation */
+.fadeIn {
+  opacity: 0;
+}
+.fromBottom {
+  animation: from-bottom 500ms ease-out forwards;
+}
+
+.fromTop {
+  animation: from-top 500ms ease-out forwards;
+}
+
+@keyframes from-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes from-top {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
